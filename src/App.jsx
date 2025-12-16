@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
@@ -10,7 +10,7 @@ import PhotoGallery from './components/PhotoGallery';
 
 export default function App(){
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar />
       <div className="container my-4">
         <Routes>
@@ -22,6 +22,6 @@ export default function App(){
           <Route path="/photos" element={<PhotoGallery />} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
